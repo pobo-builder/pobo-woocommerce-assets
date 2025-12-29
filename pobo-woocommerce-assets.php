@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: Pobo WooCommerce Assets
+ * Plugin Name: Pobo Page Builder - WooCommerce
  * Plugin URI: https://github.com/pobo-builder/pobo-woocommerce-assets
- * Description: Adds Pobo Page Builder SDK script to your WooCommerce store.
+ * Description: Integrates Pobo Page Builder to display professionally designed product content in WooCommerce.
  * Version: 1.0.0
  * Requires at least: 5.8
  * Requires PHP: 7.4
- * Author: Pobo
+ * Author: Pobo Page Builder
  * Author URI: https://pobo.cz
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html

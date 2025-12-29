@@ -2,7 +2,7 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Pobo WooCommerce Assets 1.0.0\n"
+"Project-Id-Version: Pobo Page Builder - WooCommerce 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/pobo-builder/pobo-woocommerce-assets/issues\n"
 "POT-Creation-Date: 2024-12-29T00:00:00+00:00\n"
 "MIME-Version: 1.0\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Pobo WooCommerce Assets\n"
+"X-Generator: Pobo Page Builder - WooCommerce\n"
 "X-Domain: pobo-woocommerce-assets\n"
 
 #: pobo-woocommerce-assets.php:80
@@ -22,7 +22,7 @@ msgstr ""
 
 #: pobo-woocommerce-assets.php:97
 #: pobo-woocommerce-assets.php:98
-msgid "Pobo WooCommerce Assets"
+msgid "Pobo Page Builder - WooCommerce"
 msgstr ""
 
 #: pobo-woocommerce-assets.php:98
