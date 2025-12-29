@@ -1,0 +1,70 @@
+# Copyright (C) 2024 Pobo
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pobo WooCommerce Assets 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/pobo-builder/pobo-woocommerce-assets/issues\n"
+"POT-Creation-Date: 2024-12-29T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Pobo WooCommerce Assets\n"
+"X-Domain: pobo-woocommerce-assets\n"
+
+#: pobo-woocommerce-assets.php:80
+msgid "%s requires WooCommerce to be installed and active."
+msgstr ""
+
+#: pobo-woocommerce-assets.php:97
+#: pobo-woocommerce-assets.php:98
+msgid "Pobo WooCommerce Assets"
+msgstr ""
+
+#: pobo-woocommerce-assets.php:98
+msgid "Pobo Assets"
+msgstr ""
+
+#: pobo-woocommerce-assets.php:109
+msgid "Settings"
+msgstr ""
+
+#: pobo-woocommerce-assets.php:130
+msgid "SDK Settings"
+msgstr ""
+
+#: pobo-woocommerce-assets.php:137
+msgid "Enable"
+msgstr ""
+
+#: pobo-woocommerce-assets.php:145
+msgid "Eshop ID"
+msgstr ""
+
+#: pobo-woocommerce-assets.php:153
+msgid "Eshop URL"
+msgstr ""
+
+#: pobo-woocommerce-assets.php:197
+msgid "Configure the Pobo Page Builder SDK settings for your WooCommerce store."
+msgstr ""
+
+#: pobo-woocommerce-assets.php:208
+msgid "Enable Pobo SDK script"
+msgstr ""
+
+#: pobo-woocommerce-assets.php:219
+msgid "e.g. 22249"
+msgstr ""
+
+#: pobo-woocommerce-assets.php:220
+msgid "Your Pobo Eshop ID. You can find this in your Pobo dashboard."
+msgstr ""
+
+#: pobo-woocommerce-assets.php:231
+msgid "Your store URL. Defaults to your WordPress site URL."
+msgstr ""

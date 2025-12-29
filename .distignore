@@ -1,0 +1,25 @@
+# Git
+.git
+.gitignore
+
+# Development
+.wp-env.json
+.idea
+*.log
+
+# Build tools
+node_modules
+package.json
+package-lock.json
+composer.json
+composer.lock
+vendor
+
+# Tests
+tests
+phpunit.xml
+phpcs.xml
+
+# Documentation
+CONTRIBUTING.md
+CHANGELOG.md
