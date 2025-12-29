@@ -58,7 +58,7 @@ class Pobo_WooCommerce_Assets {
     private function __construct() {
         add_action( 'admin_menu', array( $this, 'add_settings_page' ) );
         add_action( 'admin_init', array( $this, 'register_settings' ) );
-        add_action( 'wp_head', array( $this, 'output_script' ), 1 );
+        add_action( 'wp_footer', array( $this, 'output_script' ), 1 );
         add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'add_settings_link' ) );
         add_action( 'admin_notices', array( $this, 'woocommerce_missing_notice' ) );
     }
@@ -143,14 +143,6 @@ class Pobo_WooCommerce_Assets {
         );
 
         add_settings_field(
-            'eshop_id',
-            __( 'Eshop ID', 'pobo-woocommerce-assets' ),
-            array( $this, 'render_eshop_id_field' ),
-            'pobo-woocommerce-assets',
-            'pobo_woocommerce_assets_main'
-        );
-
-        add_settings_field(
             'eshop_url',
             __( 'Eshop URL', 'pobo-woocommerce-assets' ),
             array( $this, 'render_eshop_url_field' ),
@@ -165,7 +157,6 @@ class Pobo_WooCommerce_Assets {
     private function get_default_settings() {
         return array(
             'enabled'   => false,
-            'eshop_id'  => '',
             'eshop_url' => get_site_url(),
         );
     }
@@ -186,7 +177,6 @@ class Pobo_WooCommerce_Assets {
         $sanitized = array();
 
         $sanitized['enabled'] = ! empty( $input['enabled'] );
-        $sanitized['eshop_id'] = sanitize_text_field( $input['eshop_id'] ?? '' );
         $sanitized['eshop_url'] = esc_url_raw( $input['eshop_url'] ?? get_site_url() );
 
         return $sanitized;
@@ -209,17 +199,6 @@ class Pobo_WooCommerce_Assets {
             <input type="checkbox" name="<?php echo esc_attr( self::OPTION_NAME ); ?>[enabled]" value="1" <?php checked( $settings['enabled'], true ); ?>>
             <?php esc_html_e( 'Enable Pobo SDK script', 'pobo-woocommerce-assets' ); ?>
         </label>
-        <?php
-    }
-
-    /**
-     * Render eshop ID field
-     */
-    public function render_eshop_id_field() {
-        $settings = $this->get_settings();
-        ?>
-        <input type="text" name="<?php echo esc_attr( self::OPTION_NAME ); ?>[eshop_id]" value="<?php echo esc_attr( $settings['eshop_id'] ); ?>" class="regular-text" placeholder="<?php esc_attr_e( 'e.g. 22249', 'pobo-woocommerce-assets' ); ?>">
-        <p class="description"><?php esc_html_e( 'Your Pobo Eshop ID. You can find this in your Pobo dashboard.', 'pobo-woocommerce-assets' ); ?></p>
         <?php
     }
 
@@ -256,7 +235,7 @@ class Pobo_WooCommerce_Assets {
     }
 
     /**
-     * Output the SDK script in the head
+     * Output the SDK script in the footer
      */
     public function output_script() {
         // Don't output in admin
@@ -271,8 +250,8 @@ class Pobo_WooCommerce_Assets {
 
         $settings = $this->get_settings();
 
-        // Check if enabled and has eshop ID
-        if ( empty( $settings['enabled'] ) || empty( $settings['eshop_id'] ) ) {
+        // Check if enabled
+        if ( empty( $settings['enabled'] ) ) {
             return;
         }
 
@@ -283,7 +262,6 @@ class Pobo_WooCommerce_Assets {
             async
             id="pobo-b2b-sdk"
             data-pobo-eshop-url="<?php echo esc_url( $eshop_url ); ?>"
-            data-pobo-eshop-id="<?php echo esc_attr( $settings['eshop_id'] ); ?>"
             fetchpriority="high"
             src="https://image.pobo.space/assets/b2b.js">
         </script>

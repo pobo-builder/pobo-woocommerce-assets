@@ -7,6 +7,9 @@
 .idea
 *.log
 
+# Scripts
+bin
+
 # Build tools
 node_modules
 package.json
